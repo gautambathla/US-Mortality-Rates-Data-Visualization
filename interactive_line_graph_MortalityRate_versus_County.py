@@ -101,6 +101,10 @@ def modify_doc():
         line_graph.legend.label_text_font_size = "5pt"
         line_graph.legend.spacing = -7
         line_graph.xaxis.major_label_orientation = math.pi/2
+        line_graph.xaxis.axis_label = "Year"
+        line_graph.yaxis.axis_label = "Mortality Rate"
+        line_graph.title.align = "center"
+        line_graph.title.text_font_size = "15pt"
 
         print("Make Plot end")
 
