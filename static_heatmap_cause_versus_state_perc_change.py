@@ -20,7 +20,6 @@ output_file("static_heatmap_Cause_versus_State_Perc_change.html")
 
 for root, dirs, files in os.walk(file_path): 
     for filename in files:
-        if 'IHME' in filename:
             file_list.append(filename)
 
 for file_name in file_list:
@@ -99,6 +98,8 @@ def modify_doc():
         heat_map.axis.major_label_standoff = 0
         heat_map.xaxis.major_label_orientation = 1.0
         heat_map.xaxis.major_label_orientation = math.pi/2
+        heat_map.xaxis.axis_label = "State"
+        heat_map.yaxis.axis_label = "Cause"
 
         hover_bar = HoverTool(tooltips=[('State', '@state'),('Cause', '@cause'),('Mortality Rate Change', '@mortality_change')])
         heat_map.add_tools(hover_bar)
