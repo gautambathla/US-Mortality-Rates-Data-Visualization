@@ -82,20 +82,20 @@ def modify_doc():
         print("Make Plot called")
 
         # Blank plot with correct labels
-        bar_stacked = figure(x_range=cause_select_down, plot_height=1000, plot_width=750, title="Figure 3. Percentage of mortality rate based on Gender by Cause", toolbar_location=None, tools="")
+        bar_stacked = figure(y_range=cause_select_down, plot_height=750, plot_width=1000, title="Figure 3. Percentage of mortality rate based on Gender by Cause", toolbar_location=None, tools="")
 
-        bar_stacked.vbar_stack(gender_mortality, x='cause', width=0.9, color=colors, source=src, legend=[value(x) for x in gender_mortality])
+        bar_stacked.hbar_stack(gender_mortality, y='cause', height=0.9, color=colors, source=src, legend=[value(x) for x in gender_mortality])
 
-        bar_stacked.y_range.start = 0
-        bar_stacked.x_range.range_padding = 0.1
+        bar_stacked.x_range.start = 0
+        bar_stacked.y_range.range_padding = 0.1
         bar_stacked.xgrid.grid_line_color = None
         bar_stacked.axis.minor_tick_line_color = None
         bar_stacked.outline_line_color = None
-        bar_stacked.xaxis.major_label_orientation = math.pi/2
-        bar_stacked.xaxis.axis_label = "Cause"
-        bar_stacked.yaxis.axis_label = "Percentage of mortality rate"
+        bar_stacked.yaxis.axis_label = "Cause"
+        bar_stacked.xaxis.axis_label = "Percentage of mortality rate"
         bar_stacked.title.align = "center"
         bar_stacked.title.text_font_size = '15pt'
+        bar_stacked.legend.orientation = "horizontal"
 
         print("Make Plot end")
 
