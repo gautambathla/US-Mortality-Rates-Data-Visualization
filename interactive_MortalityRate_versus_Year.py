@@ -16,12 +16,14 @@ file_directories = []
 file_name_list = []
 
 for directory in os.listdir(file_path): 
+    if 'IHME' in directory:
         file_directories.append(directory)
 
 for directory in file_directories:
     file_list = []
     for root, dirs, files in os.walk(os.path.join(file_path, directory)):
         for file_name in files:
+            if 'IHME' in file_name:
                 file_list.append(file_name)
     file_name_list.append(file_list)
 
@@ -96,13 +98,14 @@ def main_func(directory_name, file_list):
             # Title 
             p.title.align = 'center'
             p.title.text_font_size = '20pt'
-            p.title.text_font = 'serif'
 
             # Axis titles
             p.xaxis.axis_label_text_font_size = '14pt'
             p.xaxis.axis_label_text_font_style = 'bold'
             p.yaxis.axis_label_text_font_size = '14pt'
             p.yaxis.axis_label_text_font_style = 'bold'
+            p.xaxis.axis_label = "Year"
+            p.yaxis.axis_label = "Mortality Rate"
 
             # Tick labels
             p.xaxis.major_label_text_font_size = '12pt'
