@@ -78,6 +78,10 @@ def modify_doc():
         heat_map.axis.major_label_text_font_size = "5pt"
         heat_map.axis.major_label_standoff = 0
         heat_map.xaxis.major_label_orientation = 1.0
+        heat_map.xaxis.axis_label = "Year"
+        heat_map.yaxis.axis_label = "State"
+        heat_map.title.align = "center"
+        heat_map.title.text_font_size = '15pt'
 
         hover = HoverTool(tooltips=[('Name', '@name'), ('Mortality Rate', '@mortality')])
         heat_map.add_tools(hover)
