@@ -103,7 +103,7 @@ def modify_doc():
                 outy.append(out.loc[keys[0]].loc[keys[1]])
 
         # Blank plot with correct labels
-        box_plot = figure(plot_height=1000,plot_width=1000,tools="", background_fill_color="#efefef", x_range=cause, toolbar_location=None)
+        box_plot = figure(plot_height=1000,plot_width=1000, title="Mortality Rate by Cause", background_fill_color="#efefef", x_range=cause, toolbar_location=None)
 
         # if no outliers, shrink lengths of stems to be no longer than the minimums or maximums
         qmin = groups.quantile(q=0.00)
@@ -130,8 +130,12 @@ def modify_doc():
         box_plot.xgrid.grid_line_color = None
         box_plot.ygrid.grid_line_color = "white"
         box_plot.grid.grid_line_width = 2
-        box_plot.xaxis.major_label_text_font_size="9pt"
+        box_plot.xaxis.major_label_text_font_size = "5pt"
         box_plot.xaxis.major_label_orientation = math.pi/2
+        box_plot.xaxis.axis_label = "Cause"
+        box_plot.yaxis.axis_label = "Mortality Rate"
+        box_plot.title.align = "center"
+        box_plot.title.text_font_size = "15pt"
 
         print("Make Plot end")
 
