@@ -109,12 +109,15 @@ def modify_doc():
 
     heat_map_pos = make_plot(df_pos, src_pos)
     title_pos = Title()
-    title_pos.text = "Causes having positive change in Mortality Rates between 1980 and 2014"
+    title_pos.align = "center"
+    title_pos.text = "Figure 2(a). Causes having positive change in Mortality Rates between 1980 and 2014"
+    title_pos.vertical_align = 'bottom'
     heat_map_pos.title = title_pos
 
     heat_map_neg = make_plot(df_neg, src_neg)
-    title_neg = Title()
-    title_neg.text = "Causes having negative change in Mortality Rates between 1980 and 2014"
+    title_neg.align = "center"
+    title_neg.text = "Figure 2(b). Causes having negative change in Mortality Rates between 1980 and 2014"
+    title_neg.vertical_align = 'bottom'
     heat_map_neg.title = title_neg
 
     return column(heat_map_pos, heat_map_neg)
