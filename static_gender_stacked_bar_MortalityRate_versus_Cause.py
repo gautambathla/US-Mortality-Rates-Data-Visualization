@@ -69,8 +69,8 @@ def modify_doc():
                 female_mortality = 0
 
             arr_df = pd.DataFrame({'cause' : [cause]})
-            arr_df['male_mortality'] = male_mortality/(male_mortality + female_mortality)
-            arr_df['female_mortality'] = female_mortality/(male_mortality + female_mortality)
+            arr_df['male_mortality'] = (male_mortality/(male_mortality + female_mortality))*100
+            arr_df['female_mortality'] = (female_mortality/(male_mortality + female_mortality))*100
             arr_df['cause'] = cause
 
             by_code = by_code.append(arr_df)
@@ -82,7 +82,7 @@ def modify_doc():
         print("Make Plot called")
 
         # Blank plot with correct labels
-        bar_stacked = figure(x_range=cause_select_down, plot_height=1000, plot_width=750, title="Mortality Rates based on Gender by Cause", toolbar_location=None, tools="")
+        bar_stacked = figure(x_range=cause_select_down, plot_height=1000, plot_width=750, title="Percentage of mortality rate based on Gender by Cause", toolbar_location=None, tools="")
 
         bar_stacked.vbar_stack(gender_mortality, x='cause', width=0.9, color=colors, source=src, legend=[value(x) for x in gender_mortality])
 
@@ -92,6 +92,10 @@ def modify_doc():
         bar_stacked.axis.minor_tick_line_color = None
         bar_stacked.outline_line_color = None
         bar_stacked.xaxis.major_label_orientation = math.pi/2
+        bar_stacked.xaxis.axis_label = "Cause"
+        bar_stacked.yaxis.axis_label = "Percentage of mortality rate"
+        bar_stacked.title.align = "center"
+        bar_stacked.title.text_font_size = '15pt'
 
         print("Make Plot end")
 
