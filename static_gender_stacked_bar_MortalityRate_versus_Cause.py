@@ -82,7 +82,7 @@ def modify_doc():
         print("Make Plot called")
 
         # Blank plot with correct labels
-        bar_stacked = figure(x_range=cause_select_down, plot_height=1000, plot_width=750, title="Percentage of mortality rate based on Gender by Cause", toolbar_location=None, tools="")
+        bar_stacked = figure(x_range=cause_select_down, plot_height=1000, plot_width=750, title="Figure 3. Percentage of mortality rate based on Gender by Cause", toolbar_location=None, tools="")
 
         bar_stacked.vbar_stack(gender_mortality, x='cause', width=0.9, color=colors, source=src, legend=[value(x) for x in gender_mortality])
 
