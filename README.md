@@ -1,4 +1,4 @@
-# US-Mortality-Rates-Data-Visualization
+# US Mortality Rates Data Visualization
 
 This is the source code for plotting interactive and static plots using Bokeh library in Python. Following are the list of files in this directory:
 
