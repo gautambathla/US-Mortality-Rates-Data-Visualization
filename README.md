@@ -43,11 +43,3 @@ To run interactive_heatmap_state_versus_year.py from bokeh server, run the follo
 ```shell
 $ python -m bokeh serve --show interactive_heatmap_state_versus_year.py
 ```
-
-## Examples
-
-Heat Map
-!(plots/figure-1.jpg)
-
-Stacked Bar Chart
-!(plots/figure-3.jpg)
