@@ -35,11 +35,11 @@ The static plots can run from the bokeh server or from the jupyter notebook. The
 
 For example: 
 
-To run static_boxplot_all_states.py from jupyter notebook
+To run `static_boxplot_all_states.py` from jupyter notebook
 ```shell
 $ run static_boxplot_all_states.py
 ```
-To run interactive_heatmap_state_versus_year.py from bokeh server, run the following command from terminal/ command prompt
+To run `interactive_heatmap_state_versus_year.py` from bokeh server, run the following command from terminal/ command prompt
 ```shell
 $ python -m bokeh serve --show interactive_heatmap_state_versus_year.py
 ```
