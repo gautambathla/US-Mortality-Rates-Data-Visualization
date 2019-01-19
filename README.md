@@ -6,11 +6,11 @@ This is the source code for plotting interactive and static plots using Bokeh li
 
 * `interactive_heatmap_state_versus_year.py` - This is the interactive heat map displaying mortality rate for different states and years. There are dropdowns for cause and gender to analyze different cases.
 
-* `interactive_line_graph_MortalityRate_versus_County.py` - This file contains the interactive multiple line graphs in one plot displaying Mortality Rate for all the counties in a state from 1980 to 2014. There are dropdowns avaliable for state, cause and gender. The legend is used to differentiate between the counties and is and interactive one i.e. we can click any county in legend to show/hide it's graph.
+* `interactive_line_graph_MortalityRate_versus_County.py` - This file contains the interactive multiple line graphs in one plot displaying Mortality Rate for all the counties in a state from 1980 to 2014. There are dropdowns avaliable for state, cause and gender.The legend is clickable in this plot which will toggle between show and hide.
 
 * `static_boxplot_all_causes.py` - This file displays the boxplot showing variation in the mortality rates for each cause in 2014.
 
-* `static_gender_stacked_bar_MortalityRate_versus_Cause.py` - This file plots a horizontal stacked bar chart displaying the percentage distribution among genders for different causes in 2014. Median of mortality rates of all the states has been taken for each gender to caluclate the percentage distribuition.
+* `static_gender_stacked_bar_MortalityRate_versus_Cause.py` - This file plots a horizontal stacked bar chart displaying the percentage distribution among genders for different causes in 2014.
 
 * `static_heatmap_cause_versus_state_perc_change.py` - This file plots the heat map displaying the percentage change in mortality rates from 1980 to 2014 due to different causes in different states irrespective of gender. The file plots different heat map for positive and negative percentage changes.
 
