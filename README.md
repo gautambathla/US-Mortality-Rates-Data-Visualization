@@ -20,6 +20,10 @@ This is the source code for plotting interactive and static plots using Bokeh li
 
 * The plot obtained from `static_boxplot_all_causes.py`: [Box plot for different causes](http://gautambathla.com/data_visualization/static_boxplot_all_states.html)
 
+* The snapshot of plot obtained from `interactive_heatmap_state_versus_year.py`: [Snapshot for interactive Heat map for displaying mortality rate for different states and year](http:gautambathla.com/data_visualization/Snapshot_interactive_heatmap.png)
+
+* The snapshot of plot obtained from `interactive_line_graph_MortalityRate_versus_County.py`: [Snapshot for interactive Line graph displaying Mortality Rate for all the counties in a state from 1980 to 2014](http:gautambathla.com/data_visualization/Snapshot_interactive_line_graph.png)
+
 * The plot obtained from `static_gender_stacked_bar_MortalityRate_versus_Cause.py`: [Bar plot for Percentage distribution of mortality rate among gender for each cause](http://gautambathla.com/data_visualization/static_gender_stacked_bar_MortalityRate_versus_Cause.html)
 
 * The plot obtained from `static_heatmap_cause_versus_state_perc_change`: [Heat map displaying percentage change in mortality rate from 1980 to 2014 for each cause in different states](http://gautambathla.com/data_visualization/static_heatmap_cause_versus_state_perc_change.html)
